@@ -17,17 +17,6 @@ var campgroundSchema = new mongoose.Schema({
 
 var Campground = mongoose.model("Campground", campgroundSchema);
 
-Campground.create(
-    {name: "Granite Hill", image:"https://farm4.staticflickr.com/3270/2617191414_c5d8a25a94.jpg"},
-    function(err, campground){
-        if (err){
-            console.log(err);
-        } else {
-            console.log("Campground created!");
-            console.log(campground);
-        }
-    }
-    )
 
        
 
