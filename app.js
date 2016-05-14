@@ -3,8 +3,10 @@ var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var Campground = require("./models/campground");
+var seedDB = require("./seeds");
 // requiring all the dependencies
 
+seedDB();
 mongoose.connect("mongodb://localhost/campme");
 
 app.use(bodyParser.urlencoded({extended: true}));
