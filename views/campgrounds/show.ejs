@@ -18,20 +18,25 @@
                     <p><%= campground.description %></p>
                 </div>
             </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success"href="/campgrounds/<%= campground._id%>/comments/new">Add new comment</a>
+                </div>
+                <hr>
+                    <% campground.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="md-col-12">
+                            <strong><%= comment.author %></strong>
+                            <span class="pull-right">10 days ago</span>
+                            <p><%= comment.text %></p>
+                        </div>
+                    </div>
+                    
+                    <% }) %>
+            </div>
         </div>
     </div>
 </div>
-<h1><%= campground.name %></h1>
- 
 
 
-<p><%= campground.description %></p>
-
-<p>
-    <a class="btn btn-success"href="/campgrounds/<%= campground._id%>/comments/new">Add new comment</a>
-</p>
-
-<% campground.comments.forEach(function(comment){ %>
-    <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
-<% }) %>
 <% include ../partials/footer %>
