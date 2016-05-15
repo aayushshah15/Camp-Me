@@ -102,7 +102,7 @@ app.post("/campgrounds/:id/comments", function(req, res){
                } else {
                    campground.comments.push(comment);
                    campground.save();
-                   res.redirect("/campgrouds/"+campground._id);
+                   res.redirect("/campgrounds/"+campground._id);
                }
            });
        }
