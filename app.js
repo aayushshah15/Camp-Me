@@ -20,7 +20,7 @@ app.use(express.static(__dirname + "/public"));
 
 //Passport config
 app.use(require("express-session")({
-    secret: "Once again Rusty wins cutest dog!",
+    secret: "Once again UWaterloo misses an ACM Medal!",
     resave: false,
     saveUninitialized: false
 }));
